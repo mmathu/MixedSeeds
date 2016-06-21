@@ -8,11 +8,7 @@ $articleLinkArray = array();
 
 //Array Holds link to websites
 
-//News Website
-$newsUrlOne = "http://bbc.co.uk";
-$newsUrlExtension = "/news";
-
-function retrieve_links($mainUrl, $urlExtension){
+function retrieve_links($mainUrl, $urlExtension, $searchTerms){
 	$combinedURL = $mainUrl.$urlExtension;
 	$websiteLink = file_get_contents($combinedURL);
 	
@@ -26,37 +22,38 @@ function retrieve_links($mainUrl, $urlExtension){
 	preg_match_all("/$regexp/siU", $websiteLink, $matches );
 	//"siU" matches are caseless, are ungreedy, includes line breaks
 	
-	newsLinks($matches, $mainUrl);
+	newsLinks($matches, $mainUrl, $searchTerms);
 	
 }
 
 //Take links and output it
-function newsLinks($matches, $mainUrl){
+function newsLinks($matches, $mainUrl, $searchTerms){
 	$arrayPos = 0;
 	//Matches[0] to just contain matched pattern
 	foreach($matches[0] as $matchTitle ){
 								//USED TO DETERMINE WHATS BEING LOOKED AT
-		if(stripos($matchTitle, "leave" )){
+		foreach($searchTerms as $searchTerm)
+		{
+			if(stripos($matchTitle, $searchTerm)){
 			
 			$urlLink = $mainUrl.$matches[2][$arrayPos]; //extract link from 2d array 
 			
+			if(checkLinkExists($urlLink)){
+				
+			}
+			else{
 			enterDataArray($matchTitle, $urlLink);
+			}
+
+			}
 			
-		//	echo "<pre>";
-		//	echo "<a href='$urlLink' target='_blank'>";
-		//	array_push($articleTitleLink, $urlLink);
-		//	echo $urlLink; 
-		//	echo"</a>";
-		//	echo"</pre>";	
 		}
+		
 		
 		$arrayPos = $arrayPos + 1;
 	}
 	
 	printArray();
-	//foreach($articleTitleLink as $articleContent){
-	//echo $articleContent, '<br>';
-	//}
 	
 }
 
@@ -67,6 +64,20 @@ function enterDataArray($articleTitle, $articleLink){
 	array_push($articleTitleArray, $articleTitle );
 	array_push($articleLinkArray, $articleLink);
 	
+}
+
+
+// function check if link exists in array
+function checkLinkExists($urlLinkExists){
+	global $articleLinkArray;
+	
+	foreach($articleLinkArray as $articleLink){
+		if($urlLinkExists == $articleLink){
+			return true;
+		}
+	}
+	
+	return false;
 }
 
 //function print out the array
@@ -84,11 +95,13 @@ function printArray(){
 		$arrayPos = $arrayPos + 1;
 	}
 	
+	$articleTitleArray = array();
+	$articleLinkArray = array();
+	
 }
 
-// function check if link exists in array
 
-retrieve_links($newsUrlOne, $newsUrlExtension);
+
 
 
 

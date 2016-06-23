@@ -10,14 +10,11 @@ echo"</h1>";
 
 $newsSearchTerms = array('marks & spencer', 'M&S', 'marks&spencer', 'brexit');
 
-$newsUrlOne = "http://bbc.co.uk";
-$newsUrlExtension = "/news/business";
+$newsUrlArray = array('http://bbc.co.uk', 'http://uk.reuters.com');
+$newsUrlExtensionArray = array('/news/business', '/business');
 
-$newsUrlTwo = "http://uk.reuters.com/";
-$newsUrlExtensionTwo = "/business";
+retrieve_links($newsUrlArray, $newsUrlExtensionArray, $newsSearchTerms);
 
-retrieve_links($newsUrlOne, $newsUrlExtension, $newsSearchTerms);
-retrieve_links($newsUrlTwo, $newsUrlExtensionTwo, $newsSearchTerms);
 
 echo "<hr>";
 ?>

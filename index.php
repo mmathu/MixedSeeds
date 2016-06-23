@@ -10,14 +10,10 @@ echo"</h1>";
 
 $newsSearchTerms = array('marks & spencer', 'M&S', 'marks&spencer', 'brexit');
 
-$newsUrlOne = "http://bbc.co.uk";
-$newsUrlExtension = "/news/business";
+$newsUrlArray = array('http://bbc.co.uk', 'http://uk.reuters.com');
+$newsUrlExtensionArray = array('/news/business', '/business');
 
-$newsUrlTwo = "http://uk.reuters.com/";
-$newsUrlExtensionTwo = "/business";
-
-retrieve_links($newsUrlOne, $newsUrlExtension, $newsSearchTerms);
-retrieve_links($newsUrlTwo, $newsUrlExtensionTwo, $newsSearchTerms);
+retrieve_links($newsUrlArray, $newsUrlExtensionArray, $newsSearchTerms);
 
 echo "<hr>";
 
@@ -26,20 +22,13 @@ echo"<h1>";
 echo"Games:";
 echo"</h1>";
 
-$gameSearchTerms = array('Legend of Heroes: Trails in the Sky', 'Trails in the sky', 'legend of heroes', 'Monster Hunter', 'MH4G', 'MH4U', 'Stardew Valley', 'stardew', 'Overwatch');
+$gameSearchTerms = array('Trails in the sky', 'legend of heroes', 'Monster Hunter', 'MH4U', 'Stardew Valley', 'stardew', 'Overwatch');
 
-$gameUrlOne = "http://www.pcgamer.com";
-$gameUrlExtensionOne = "/news/";
+$gameUrlArray = array('http://www.pcgamer.com', 'http://gematsu.com', 'http://mmoculture.com' );
+$gameExtensionArray = array('/news/', '/c/pc', '');
 
-$gameUrlTwo = "http://gematsu.com";
-$gameUrlExtensionTwo = "/c/pc";
+retrieve_links($gameUrlArray, $gameExtensionArray, $gameSearchTerms);
 
-$gameUrlThree = "http://mmoculture.com";
-$gameUrlExtensionThree = "";
-
-retrieve_links($gameUrlOne, $gameUrlExtensionOne, $gameSearchTerms);
-retrieve_links($gameUrlTwo, $gameUrlExtensionTwo, $gameSearchTerms);
-retrieve_links($gameUrlThree, $gameUrlExtensionThree, $gameSearchTerms);
 
 echo "<hr>";
 
@@ -48,17 +37,12 @@ echo"<h1>";
 echo"Entertainment:";
 echo"</h1>";
 
-$entSearchTerms = array('gintama', 'one punch man', 'one-punch', 'ghibli');
+$entSearchTerms = array('gintama', 'one punch man', 'one-punch', 'ghibli', 'mob');
 
-$entUrlOne = "http://www.tribute.ca";
-$entUrlExtensionOne = "/movies/dvd/";
+$entUrlArray = array('http://www.animenewsnetwork.com');
+$entExtensionArray = array('');
 
-$entUrlTwo = "http://www.animenewsnetwork.com";
-$entUrlExtensionTwo = "";
-
-retrieve_links($entUrlOne, $entUrlExtensionOne, $entSearchTerms);
-retrieve_links($entUrlTwo, $entUrlExtensionTwo, $entSearchTerms);
-
+retrieve_links($entUrlArray, $entExtensionArray, $entSearchTerms);
 
 echo "<hr>";
 
@@ -68,11 +52,12 @@ echo"<h1>";
 echo"Music:";
 echo"</h1>";
 
-$musicSearchTerms = array('Kendrick Lamar', 'jay electronica');
+$musicSearchTerms = array('Kendrick Lamar', 'jay electronica', 'panda');
 
-$musicUrlOne = "http://rap.genius.com";
-$musicUrlExtensionOne = "";
+$musicUrlArray = array('http://hiphopdx.com');
+$musicExtensionArray = array('/news/');
 
-retrieve_links($musicUrlOne, $musicUrlExtensionOne, $musicSearchTerms);
+
+retrieve_links($musicUrlArray, $musicExtensionArray, $musicSearchTerms);
 
 ?>

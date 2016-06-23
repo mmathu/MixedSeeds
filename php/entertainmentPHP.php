@@ -8,16 +8,12 @@ echo"<h1>";
 echo"Entertainment:";
 echo"</h1>";
 
-$entSearchTerms = array('gintama', 'one punch man', 'one-punch', 'ghibli');
+$entSearchTerms = array('gintama', 'one punch man', 'one-punch', 'ghibli', 'mob');
 
-$entUrlOne = "http://www.tribute.ca";
-$entUrlExtensionOne = "/movies/dvd/";
+$entUrlArray = array('http://www.animenewsnetwork.com');
+$entExtensionArray = array('');
 
-$entUrlTwo = "http://www.animenewsnetwork.com";
-$entUrlExtensionTwo = "";
-
-//retrieve_links($entUrlOne, $entUrlExtensionOne, $entSearchTerms);
-retrieve_links($entUrlTwo, $entUrlExtensionTwo, $entSearchTerms);
+retrieve_links($entUrlArray, $entExtensionArray, $entSearchTerms);
 
 echo "<hr>";
 

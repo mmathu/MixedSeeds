@@ -10,18 +10,10 @@ echo"</h1>";
 
 $gameSearchTerms = array('Legend of Heroes: Trails in the Sky', 'Trails in the sky', 'legend of heroes', 'Monster Hunter', 'MH4G', 'MH4U', 'Stardew Valley', 'stardew', 'Overwatch');
 
-$gameUrlOne = "http://www.pcgamer.com";
-$gameUrlExtensionOne = "/news/";
+$gameUrlArray = array('http://www.pcgamer.com', 'http://gematsu.com', 'http://mmoculture.com' );
+$gameExtensionArray = array('/news/', '/c/pc', '');
 
-$gameUrlTwo = "http://gematsu.com";
-$gameUrlExtensionTwo = "/c/pc";
-
-$gameUrlThree = "http://mmoculture.com";
-$gameUrlExtensionThree = "";
-
-retrieve_links($gameUrlOne, $gameUrlExtensionOne, $gameSearchTerms);
-retrieve_links($gameUrlTwo, $gameUrlExtensionTwo, $gameSearchTerms);
-retrieve_links($gameUrlThree, $gameUrlExtensionThree, $gameSearchTerms);
+retrieve_links($gameUrlArray, $gameExtensionArray, $gameSearchTerms);
 
 echo "<hr>";
 

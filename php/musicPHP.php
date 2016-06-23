@@ -11,8 +11,8 @@ echo"</h1>";
 
 $musicSearchTerms = array('Kendrick Lamar', 'jay electronica');
 
-$musicUrlOne = "http://rap.genius.com";
-$musicUrlExtensionOne = "";
+$musicUrlArray = array('http://hiphopdx.com');
+$musicExtensionArray = array('/news/');
 
-retrieve_links($musicUrlOne, $musicUrlExtensionOne, $musicSearchTerms);
+retrieve_links($musicUrlArray, $musicExtensionArray, $musicSearchTerms);
 ?>

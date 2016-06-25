@@ -97,10 +97,16 @@ function cleanseURL($mainUrl, $articleURL){
 //Enters title and link into array then outputs them
 function enterDataArray($articleTitle, $articleLink){
 	global $articleTitleArray, $articleLinkArray;
-	array_push($articleTitleArray, strip_tags($articleTitle) );
+	array_push($articleTitleArray, removeTagSpace($articleTitle));
 	array_push($articleLinkArray, $articleLink);	
 	
 	
+}
+
+//Remove html tags and whitespace
+function removeTagSpace($articleTitle){
+	$cleanedTitle = preg_replace('/\s+/S', ' ', strip_tags($articleTitle));
+	return $cleanedTitle;
 }
 
 
@@ -127,8 +133,8 @@ function removeComments($urlLink){
 }
 
 function removeImg($articleTitle){
-	//returns true if title is not an img
-	if(strpos($articleTitle, "<img")){
+	//returns true if title is not an img 					  No title contained
+	if(strpos($articleTitle, '<img') or strpos($articleTitle, '></a>')){
 		return false;
 	} else {
 		return true;
@@ -140,22 +146,24 @@ function printArray(){
 	global $articleTitleArray, $articleLinkArray; //arrays should be the same size
 	$arrayPos = 0;
 	foreach($articleTitleArray as $posIndicator){
-		echo "<pre>";
+		echo '<pre>';
+		echo"<div class='contentBox'>";
 		echo"<a href='$articleLinkArray[$arrayPos]'>";
 		//If no title is found - a the link is displayed instead
 		if($articleTitleArray[$arrayPos] != ''){
-			echo"<h3>";
+			echo'<h3>';
 			echo $articleTitleArray[$arrayPos];
-			echo"</h3>";
+			echo'</h3>';
 		} 
 		else{
-			echo "<p>";
+			echo '<p>';
 			echo $articleLinkArray[$arrayPos];
-			echo "</p>";
+			echo '</p>';
 		}	
 
-		echo "</a>";
-		echo"</pre>";
+		echo'</a>';
+		echo"</div>";
+		echo'</pre>';
 		$arrayPos = $arrayPos + 1;
 	}
 	$articleTitleArray = array();

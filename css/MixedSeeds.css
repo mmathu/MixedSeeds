@@ -1,0 +1,76 @@
+*{
+	padding: 0;
+	margin: 0;	
+}
+
+body, header, footer{
+	display: block;
+}
+
+
+
+body{
+		background-color: rgb(247, 247, 247);
+}
+
+
+header{
+	background-color: rgb(117, 117, 163);
+	padding:20px;
+}
+
+.contentWrapper{
+	max-width: 1020px;
+	margin: 0 auto;
+}
+
+
+h2{
+	margin: 0 auto;
+	padding: 5px;
+	max-width:620px;
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
+
+#newsContent h2{
+	background-color: rgb(255, 51, 51);
+}
+
+#gamesContent h2{
+	background-color: rgb(128, 255, 128);
+}
+
+#entertainmentContent h2{
+	background-color: rgb(102, 194, 255);
+}
+
+#musicContent h2{
+	background-color: rgb(153, 153, 153);
+	
+}
+
+/*Box containing links */
+.contentBox{
+	overflow: none;
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 15px;
+	white-space: normal;
+	background-color: white;
+	
+}
+a{
+	text-decoration: none;
+}
+
+footer{
+	margin-top: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: rgb(117, 117, 163);
+	bottom: 1px;
+	text-align: center;
+}

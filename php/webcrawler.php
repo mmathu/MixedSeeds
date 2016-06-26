@@ -14,6 +14,13 @@ function retrieve_links($mainUrlArray, $urlExtensionArray, $searchTerms){
 	{
 		$combinedURL = $mainUrl.$urlExtensionArray[$arrayPos];
 		$websiteLink = file_get_contents($combinedURL);
+		//cURL operations to read a website
+		//$cHandle = curl_init();
+		//curl_setopt($cHandle, CURLOPT_URL, $combinedURL);
+		//curl_setopt($cHandle, CURLOPT_RETURNTRANSFER, 1);
+		//curl_setopt($cHandle, CURLOPT_CONNECTTIMEOUT, 0);
+		//$websiteLink = curl_exec($cHandle);
+		//curl_close($cHandle);
 		
 		//Regular Expressions
 		$regexp = "<a\s[^>]*href=([\"\']??)([^\\1 >]*?)\\1[^>]*>(.*)<\/a>";
@@ -34,6 +41,7 @@ function retrieve_links($mainUrlArray, $urlExtensionArray, $searchTerms){
 			newsLinks($matches, $mainUrl, $searchTerms);
 		}
 		$arrayPos = $arrayPos + 1;
+		
 	}
 	
 }

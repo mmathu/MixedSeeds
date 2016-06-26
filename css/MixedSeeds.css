@@ -3,21 +3,62 @@
 	margin: 0;	
 }
 
-body, header, footer{
+ header, footer{
 	display: block;
 }
 
 
 
 body{
+		display: block;
 		background-color: rgb(247, 247, 247);
 }
 
 
 header{
 	background-color: rgb(117, 117, 163);
-	padding:20px;
 }
+
+nav ul{
+	list-style-type: none;
+	 overflow: hidden;
+}
+
+nav li{
+	text-align: center;
+}
+
+.contentWrapper nav{
+	max-width: 180px;
+	margin: 0 auto;
+}
+
+
+header nav li a {
+    display: block;
+    padding: 5px 25px;
+    float:left;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+header h3{
+	text-align: center;
+	padding: 5px;
+	color: white;
+}
+
+header nav li a:hover {
+    color: rgb(217, 217, 217);
+}
+
+.active{
+	color:black;
+}
+
+
 
 .contentWrapper{
 	max-width: 1020px;
@@ -66,11 +107,24 @@ a{
 	text-decoration: none;
 }
 
+/**/
+
+#aboutContent{
+	padding: 10px;
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+
 footer{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
 	margin-top: 5px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	background-color: rgb(117, 117, 163);
-	bottom: 1px;
 	text-align: center;
+	color: white;
 }

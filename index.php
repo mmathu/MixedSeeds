@@ -1,63 +1,55 @@
-<?php require '/php/webcrawler.php'; 
-//SOME WEBSITES NOT COMPATIBLE
-//Websites require that both headline of the story and story image to be hyperlinked individually
-//the "removeImg" function prevents some website articles from appearing
+<!DOCTYPE html>
+<html>
+<head>
+	<title> MixedSeeds Home </title>
+	<?php require 'php/webcrawler.php' ?>
+	<link rel="stylesheet" type="text/css" href="css/MixedSeeds.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-//News Website
-echo"<h1>"; 
-echo"NEWS";
-echo"</h1>";
+<body>
 
-$newsSearchTerms = array('marks & spencer', 'M&S', 'marks&spencer', 'brexit');
-
-$newsUrlArray = array('http://bbc.co.uk', 'http://uk.reuters.com');
-$newsUrlExtensionArray = array('/news/business', '/business');
-
-retrieve_links($newsUrlArray, $newsUrlExtensionArray, $newsSearchTerms);
-
-echo "<hr>";
-
-// GAME Websites
-echo"<h1>"; 
-echo"Games:";
-echo"</h1>";
-
-$gameSearchTerms = array('Trails in the sky', 'legend of heroes', 'Monster Hunter', 'MH4U', 'Stardew Valley', 'stardew', 'Overwatch');
-
-$gameUrlArray = array('http://www.pcgamer.com', 'http://gematsu.com', 'http://mmoculture.com' );
-$gameExtensionArray = array('/news/', '/c/pc', '');
-
-retrieve_links($gameUrlArray, $gameExtensionArray, $gameSearchTerms);
+	<header>
+		<div class="contentWrapper"> 
+			<h3>MixedSeeds</h3>
+			<nav>
+				<ul>
+					<li><a class="active">HOME</a></li>
+					<li><a href="html/about.html">ABOUT</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
 
-echo "<hr>";
+	<div class="contentWrapper">	
+		<section class="infoContent" id="newsContent" >
+			<h2>Business</h2>
+			<?php require 'php/newsPHP.php' ?>
+		</section>
+		
+		<section class="infoContent" id="gamesContent" >
+			<h2>Games</h2>
+			<?php require 'php/gamesPHP.php' ?>
+		</section>
+		
+		<section class="infoContent" id="entertainmentContent" >
+			<h2>Entertainment</h2>
+			<?php require 'php/entertainmentPHP.php' ?>
+		</section>
+		
+		<section class="infoContent" id="musicContent">
+			<h2>Music</h2>
+			<?php require 'php/musicPHP.php' ?>
+		</section>
+	</div>
+	
+	<footer>
+		<p> Designed by Myoran </p>
+	</footer>	
 
-//Entertainment
-echo"<h1>"; 
-echo"Entertainment:";
-echo"</h1>";
+	
 
-$entSearchTerms = array('gintama', 'one punch man', 'one-punch', 'ghibli', 'mob');
+</body>
 
-$entUrlArray = array('http://www.animenewsnetwork.com');
-$entExtensionArray = array('');
-
-retrieve_links($entUrlArray, $entExtensionArray, $entSearchTerms);
-
-echo "<hr>";
-
-//Music
-
-echo"<h1>"; 
-echo"Music:";
-echo"</h1>";
-
-$musicSearchTerms = array('Kendrick Lamar', 'jay electronica', 'panda');
-
-$musicUrlArray = array('http://hiphopdx.com');
-$musicExtensionArray = array('/news/');
-
-
-retrieve_links($musicUrlArray, $musicExtensionArray, $musicSearchTerms);
-
-?>
+</html>

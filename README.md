@@ -11,6 +11,8 @@ $[blank]UrlArray - The array contains all the websites that will be searched. Th
 
 $[blank]ExtensionArray - The array contains the extar part of the URL that directs to the part of the website that contains the articles.
 
-For example if you wanted news about a specific business, e.g Marks & Spencer, You put the search terms in the first array. For example, 'M&S', 'Marks & Spencer'.
+For example if you wanted news about a specific business, e.g Marks & Spencer, You put the search terms in the first array ; 'M&S', 'Marks & Spencer'.
+
 The second array would contain the websites home url you want to search, e.g 'http://bbc.co.uk'. 'http://' must be included in the url.
+
 The third array would contain the page you want to search articles on e.g '/news/business'.

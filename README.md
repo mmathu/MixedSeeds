@@ -2,7 +2,7 @@
 Initially created to be a webcrawler but was turned into a perosnal article feed, that replicates an RSS feed. Developed using PHP5.
 
 ##Functionality
-#######Initialising Arrays
+######Initialising Arrays
 Three arrays are created that contain the information to retrieve the appropriate headlines, [blank] is replaced with the genre fo the article:
 
 $[blank]SearchTerms - An array that contains all the search terms that will be used to find the correct articles. Case Insensitive

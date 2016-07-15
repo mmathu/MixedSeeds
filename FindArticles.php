@@ -5,6 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-    <?php require 'articleSearchTerms.php' ?>
+    <?php require 'php/articleSearchTerms.php'; ?>
 </body>
 </html>

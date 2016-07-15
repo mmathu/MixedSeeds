@@ -1,8 +1,22 @@
 # MixedSeeds
 Initially created to be a webcrawler but was turned into a perosnal article feed, that replicates an RSS feed. Developed using PHP5.
 
-##Functionality
-######Initialising Arrays
+The website relies on two scripts to work:
+**'FindArticles.php'** - This script searches for specific articles tailored to the user's interest (more on how this works later) and inputs the article name, article link, genre of article, and timestamp into a mysql database. 
+This is NOT executed when the website is loaded up. Ideally, this script is run every hour by a webserver.
+
+**outPutArticle** - Performs an SQL query on the database to retrieve the information and display them on the website.
+
+
+
+
+
+
+
+
+## OUTDATED INFORMATION
+Functionality
+
 Three arrays are created that contain the information to retrieve the appropriate headlines, [blank] is replaced with the genre fo the article:
 
 $[blank]SearchTerms - An array that contains all the search terms that will be used to find the correct articles. Case Insensitive

@@ -46,7 +46,9 @@ The **"Previous Version"** folder contains the scripts for when the website did 
 
 * Add a user base. The articles retrieved can be tailored to specific users.
 
+##Components used 
 
+cURL used to scrape websites - https://curl.haxx.se/
 
 
 ## OUTDATED INFORMATION

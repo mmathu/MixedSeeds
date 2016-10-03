@@ -5,7 +5,12 @@
 
 
 ##About
-A webscraper that retrieves articles from selected websites, based on key words. The websites and keywords are pre-determined.
+A website that displays links to articles.
+
+It uses a webscraper that retrieves article links from selected websites, based on keywords. The websites and keywords are pre-determined.
+
+The article links are then stored in a database. The website then retrieves the link from the database and displays it on the website
+
 
 ##Configuration
 To customise the website do the following:

@@ -22,7 +22,7 @@ To customise the website do the following:
      If the articles can be retrieved on the website 'http://www.webarticles.com', enter that into the array. If the website                  contains a path, e.g 'http://www.articlewebsite.com/pathtoarticles', only enter the domain name 'http://www.articlewebsite.com'.
      The '/pathtoarticles' would then be placed into the array below.
   
-  *  **xUrlExtensionArray** This array contains the path, if it is needed, of the websites you want to search. If no path is needed,   enter ''  
+  *  **xUrlExtensionArray** This array contains the path of the website. If there is no path to the website input **''** instead. 
   
       **NOTE: For one whole website, ensure the 'domain name' and the 'path' have the same index, in the arrays 'xUrlArray' and                       'xUrlExtensionArray'.** 
 

@@ -10,7 +10,10 @@ A webscraper that retrieves articles from selected websites, based on key words.
 ##Configuration
 To customise the website do the following:
 
-Locate the **articleSearchTerms.php** in 'MixedSeeds/php/articleSearchTerms.php'.  The file contains variations of the same block of code. 
+Locate the **articleSearchTerms.php** in 'MixedSeeds/php/articleSearchTerms.php'.  
+The file contains variations of the same block of code
+
+##How it works
 
 The website relies on two scripts to work:
 

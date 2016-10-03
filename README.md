@@ -1,5 +1,5 @@
 # MixedSeeds
-Initially created to be a webcrawler but was turned into a perosnal article feed, that replicates an RSS feed. Developed using PHP5.
+A webscraper that retrieves articles from selected websites, based on key words. The websites and keywords are pre-determined.
 
 The website relies on two scripts to work:
 

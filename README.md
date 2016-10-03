@@ -15,7 +15,7 @@ To customise the website do the following:
   * The page has variations of the following type of code:
   
   1.  **$xSearchTerms** contains an array of keywords that are used to select which articles should be retrieved from the website.
-                    The amount of keywords do NOT need to be limited, and can be as large as necessary.
+                    The amount of keywords do NOT need to be limited, and can contain as many keywords as necessary.
                     
   2.  **xUrlArray**     This array ONLY contains the 'domain name' of the websites you want to search.
   

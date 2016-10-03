@@ -22,9 +22,9 @@ To customise the website do the following:
   
   *  **xUrlExtensionArray** This array contains the path of the website. If there is no path to the website input **''** instead. 
   
-  *    If the articles can be retrieved on the website 'http://www.webarticles.com', enter that into the $xUrlarray. 
+      If the articles can be retrieved on the website 'http://www.webarticles.com', enter that into the **$xUrlarray**. 
      If the website contains a path, e.g 'http://www.articlewebsite.com/pathtoarticles', only enter the domain name  'http://www.articlewebsite.com'.
-     The '/pathtoarticles' would then be placed into the array xUrlExtensionArray.
+     The '/pathtoarticles' would then be placed into the array **$xUrlExtensionArray**.
   
       **NOTE: For one website url, ensure the 'domain name' and the 'path' have the same array index, in the arrays 'xUrlArray' and                       'xUrlExtensionArray'.** 
 

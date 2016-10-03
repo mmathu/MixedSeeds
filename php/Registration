@@ -1,0 +1,5 @@
+// Register User 
+
+//Generate Unique code
+//Store code in user database alongside the user's information
+//Create new table in mixedseeds, the title of the table is the generated code.

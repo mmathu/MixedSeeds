@@ -32,9 +32,9 @@ To customise the website do the following:
 
 The website relies on two scripts to work:
 
-**"FindArticles.php"** - This script searches for specific articles tailored to the user's interest (more on how this works later) and inputs the article name, article link, genre of article, and timestamp into a mysql database. 
+**"FindArticles.php"** - This script searches for specific articles tailored to the user's interest and inputs the article name, article link, genre of article, and timestamp into a mysql database. 
 
-This is NOT executed when the website is loaded up. Ideally, this script is run every hour by a webserver.
+This is NOT executed when the website is loaded up, it has to be manually exectued. Ideally, this script is run by a webserver.
 
 **"outPutArticle.php"** - Performs an SQL query on the database to retrieve the information and display them on the website.
 

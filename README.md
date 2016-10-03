@@ -14,14 +14,14 @@ To customise the website do the following:
 
   * The page has variations of the following type of code:
   
-  1. **$xSearchTerms** contains an array of keywords that are used to select which articles should be retrieved from the website.
+  1.  **$xSearchTerms** contains an array of keywords that are used to select which articles should be retrieved from the website.
                     The amount of keywords do NOT need to be limited, and can be as large as necessary.
                     
-  2. **xUrlArray**     This array ONLY contains the 'domain name' of the websites you want to search.
+  2.  **xUrlArray**     This array ONLY contains the 'domain name' of the websites you want to search.
   
-  3. **xUrlExtensionArray** This array contains the path, if it is needed, of the websites you want to search.
+  3.  **xUrlExtensionArray** This array contains the path, if it is needed, of the websites you want to search.
   
-  **NOTE: For one whole website, ensure the 'domain name' and the 'path' have the same index, in the arrays 'xUrlArray' and                       'xUrlExtensionArray'.
+      **NOTE: For one whole website, ensure the 'domain name' and the 'path' have the same index, in the arrays 'xUrlArray' and                       'xUrlExtensionArray'.
 
 ##How it works
 

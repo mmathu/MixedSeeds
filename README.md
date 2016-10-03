@@ -10,16 +10,16 @@ A webscraper that retrieves articles from selected websites, based on key words.
 ##Configuration
 To customise the website do the following:
 
-1.Locate the **articleSearchTerms.php** in 'MixedSeeds/php/articleSearchTerms.php'.  
+1. Locate the **articleSearchTerms.php** in 'MixedSeeds/php/articleSearchTerms.php'.  
 
   * The page has variations of the following type of code:
   
-  1.  **$xSearchTerms** contains an array of keywords that are used to select which articles should be retrieved from the website.
+  *  **$xSearchTerms** contains an array of keywords that are used to select which articles should be retrieved from the website.
                     The amount of keywords do NOT need to be limited, and can contain as many keywords as necessary.
                     
-  2.  **xUrlArray**     This array ONLY contains the 'domain name' of the websites you want to search.
+  *  **xUrlArray**     This array ONLY contains the 'domain name' of the websites you want to search.
   
-  3.  **xUrlExtensionArray** This array contains the path, if it is needed, of the websites you want to search.
+  *  **xUrlExtensionArray** This array contains the path, if it is needed, of the websites you want to search.
   
       **NOTE: For one whole website, ensure the 'domain name' and the 'path' have the same index, in the arrays 'xUrlArray' and                       'xUrlExtensionArray'.
 

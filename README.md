@@ -1,7 +1,5 @@
 # MixedSeeds
 
-##Contents
-
 
 
 ##About

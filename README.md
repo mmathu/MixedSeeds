@@ -46,12 +46,21 @@ The **"Previous Version"** folder contains the scripts for when the website did 
 
 ##Planned Components 
 * Customise which articles can be retrieved on the website itself.
+      
 
 * Add a user base. The articles retrieved can be tailored to specific users.
+ Create a universal database full of the links 
 
 ##Components used 
 
 cURL used to scrape websites - https://curl.haxx.se/
+
+
+
+
+
+
+
 
 
 ## OUTDATED INFORMATION
